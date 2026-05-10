@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加盟店紹介｜三郷駅南商店会</title>
+  <meta name="description" content="三郷駅南商店会に加盟する飲食店、物販店、サービス店を一覧でご紹介します。カテゴリ別の絞り込みや店名検索で、お探しのお店がきっと見つかります。">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">本文へスキップ</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="/" class="site-logo">
+        <span class="site-logo__mark">南</span>
+        <span class="site-logo__text">
+          <span class="site-logo__title">三郷駅南商店会</span>
+          <span class="site-logo__sub">Misato Minami Shotenkai</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="メインメニュー">
+        <ul>
+          <li><a href="/">ホーム</a></li>
+          <li><a href="/shops.html" aria-current="page">加盟店紹介</a></li>
+          <li><a href="/about.html">商店会について</a></li>
+          <li><a href="/#access">アクセス</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero__inner">
+        <p class="page-hero__eyebrow">Member shops</p>
+        <h1 class="page-hero__title">加盟店紹介</h1>
+        <p class="page-hero__lead">三郷駅南商店会に加盟する個性豊かなお店を一覧でご紹介します。お気に入りのお店を見つけて、ぜひ街歩きをお楽しみください。</p>
+      </div>
+    </section>
+
+    <section class="section section--shops">
+      <div class="section__inner">
+        <div class="shops-toolbar">
+          <div class="shops-search">
+            <label for="shop-search" class="visually-hidden">店舗を検索</label>
+            <input type="search" id="shop-search" placeholder="店名・キーワードで検索" autocomplete="off">
+          </div>
+          <div class="shops-filters" role="tablist" aria-label="カテゴリで絞り込み">
+            <button type="button" class="filter-chip is-active" role="tab" aria-selected="true" data-category="all">すべて</button>
+            <button type="button" class="filter-chip" role="tab" aria-selected="false" data-category="飲食">飲食</button>
+            <button type="button" class="filter-chip" role="tab" aria-selected="false" data-category="物販">物販</button>
+            <button type="button" class="filter-chip" role="tab" aria-selected="false" data-category="サービス">サービス</button>
+          </div>
+        </div>
+
+        <p id="shops-count" class="shops-count" aria-live="polite"></p>
+        <div id="shops" class="shop-grid shop-grid--full"></div>
+        <p id="shops-empty" class="shops-empty" hidden>該当するお店が見つかりませんでした。検索条件を変更してお試しください。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__title">三郷駅南商店会</p>
+        <p class="site-footer__sub">Misato Minami Shotenkai</p>
+      </div>
+      <nav aria-label="フッターメニュー" class="site-footer__nav">
+        <ul>
+          <li><a href="/">ホーム</a></li>
+          <li><a href="/shops.html">加盟店紹介</a></li>
+          <li><a href="/about.html">商店会について</a></li>
+          <li><a href="/#access">アクセス</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 三郷駅南商店会</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
