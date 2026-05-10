@@ -14,7 +14,10 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="/" class="site-logo">
-        <span class="site-logo__mark">南</span>
+        <span class="site-logo__mark" aria-hidden="true">
+          <span class="site-logo__leaf"></span>
+          <span class="site-logo__char">南</span>
+        </span>
         <span class="site-logo__text">
           <span class="site-logo__title">三郷駅南口商店会</span>
           <span class="site-logo__sub">Misato Eki Minami Shotenkai</span>
@@ -30,17 +33,25 @@
           <li><a href="/#business">事業内容</a></li>
           <li><a href="/shops.html" aria-current="page">店舗情報</a></li>
           <li><a href="/#news">お知らせ</a></li>
-          <li><a href="https://lin.ee/fuMJymX" class="nav-line" target="_blank" rel="noopener">LINE公式</a></li>
         </ul>
       </nav>
     </div>
+    <a href="https://lin.ee/fuMJymX" class="line-corner" target="_blank" rel="noopener" aria-label="LINE公式アカウントで最新情報をGET">
+      <span class="line-corner__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 5.7 2 10.18c0 3.86 3.36 7.1 7.91 7.83.31.07.73.21.83.48.1.25.06.63.03.88l-.13.83c-.04.25-.18 1 .87.55 1.06-.45 5.7-3.36 7.78-5.75C20.61 13.5 22 11.95 22 10.18 22 5.7 17.52 2 12 2z"/></svg>
+      </span>
+      <span class="line-corner__text">
+        <span>三郷駅周辺</span>
+        <strong>最新情報をGET</strong>
+      </span>
+    </a>
   </header>
 
   <main id="main">
     <section class="page-hero">
       <div class="page-hero__inner">
-        <p class="page-hero__eyebrow">Shops</p>
         <h1 class="page-hero__title">店舗情報</h1>
+        <p class="page-hero__sub">Shops</p>
         <p class="page-hero__lead">三郷駅南口商店会に加盟する個性豊かなお店を一覧でご紹介します。お気に入りのお店を見つけて、ぜひ街歩きをお楽しみください。</p>
       </div>
     </section>
