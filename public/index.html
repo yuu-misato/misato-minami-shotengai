@@ -16,7 +16,10 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="/" class="site-logo">
-        <span class="site-logo__mark">南</span>
+        <span class="site-logo__mark" aria-hidden="true">
+          <span class="site-logo__leaf"></span>
+          <span class="site-logo__char">南</span>
+        </span>
         <span class="site-logo__text">
           <span class="site-logo__title">三郷駅南口商店会</span>
           <span class="site-logo__sub">Misato Eki Minami Shotenkai</span>
@@ -32,31 +35,64 @@
           <li><a href="/#business">事業内容</a></li>
           <li><a href="/shops.html">店舗情報</a></li>
           <li><a href="/#news">お知らせ</a></li>
-          <li><a href="https://lin.ee/fuMJymX" class="nav-line" target="_blank" rel="noopener">LINE公式</a></li>
         </ul>
       </nav>
     </div>
+    <a href="https://lin.ee/fuMJymX" class="line-corner" target="_blank" rel="noopener" aria-label="LINE公式アカウントで最新情報をGET">
+      <span class="line-corner__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 5.7 2 10.18c0 3.86 3.36 7.1 7.91 7.83.31.07.73.21.83.48.1.25.06.63.03.88l-.13.83c-.04.25-.18 1 .87.55 1.06-.45 5.7-3.36 7.78-5.75C20.61 13.5 22 11.95 22 10.18 22 5.7 17.52 2 12 2z"/></svg>
+      </span>
+      <span class="line-corner__text">
+        <span>三郷駅周辺</span>
+        <strong>最新情報をGET</strong>
+      </span>
+    </a>
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="hero__inner">
-        <p class="hero__eyebrow">JR三郷駅南口</p>
-        <h1 class="hero__title">街と暮らしを、<br>もっと身近に。</h1>
-        <p class="hero__lead">三郷駅南口商店会は、地域に根ざした温かい雰囲気の商店会です。お買い物やグルメ、美容、医療など様々なお店が揃っています。個性豊かなお店とふれあいながら、心温まるひとときをお過ごしください。</p>
-        <div class="hero__actions">
-          <a href="/shops.html" class="btn btn--primary">店舗情報を見る</a>
-          <a href="https://lin.ee/fuMJymX" class="btn btn--line" target="_blank" rel="noopener">LINE公式で最新情報</a>
-        </div>
+    <section class="hero" aria-label="メインビジュアル">
+      <div class="hero__media" aria-hidden="true">
+        <span class="hero__sun"></span>
       </div>
-      <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="hero__overlay">
+        <p class="hero__eyebrow"><span>暮らしに密着した便利がいっぱい！</span></p>
+        <h1 class="hero__title">ようこそ三郷駅南口商店会へ</h1>
+      </div>
+      <div class="hero__dots" aria-hidden="true">
+        <span class="is-active"></span><span></span><span></span>
+      </div>
+    </section>
+
+    <section class="section section--news" id="news" aria-labelledby="news-heading">
+      <div class="section__inner">
+        <header class="section__head">
+          <div class="section__head-inner">
+            <h2 id="news-heading" class="section__title">最新のお知らせ</h2>
+            <p class="section__sub">News</p>
+          </div>
+        </header>
+        <ul class="news-list">
+          <li class="news-item">
+            <time datetime="2026-05-01" class="news-item__date">2026.05.01</time>
+            <span class="news-item__tag">サイト</span>
+            <p class="news-item__body">公式サイトをリニューアル公開しました。</p>
+          </li>
+          <li class="news-item">
+            <time datetime="2026-04-15" class="news-item__date">2026.04.15</time>
+            <span class="news-item__tag">LINE</span>
+            <p class="news-item__body">LINE公式アカウントで最新情報を配信中です。お友だち登録をお願いします。</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="section section--message" id="message" aria-labelledby="message-heading">
       <div class="section__inner">
         <header class="section__head">
-          <p class="section__eyebrow">Message</p>
-          <h2 id="message-heading" class="section__title">メッセージ</h2>
+          <div class="section__head-inner">
+            <h2 id="message-heading" class="section__title">メッセージ</h2>
+            <p class="section__sub">Message</p>
+          </div>
         </header>
         <p class="section__lead section__lead--wide">三郷駅南口商店会は、地域の皆さまと共に歩み続ける商店会として、人と人とのふれあいを大切にしながら、街の賑わいづくりに取り組んでいます。日々の暮らしに寄り添い、安心して立ち寄れる場所であるために、加盟店一同、心を込めてお迎えします。</p>
       </div>
@@ -65,8 +101,10 @@
     <section class="section section--business" id="business" aria-labelledby="business-heading">
       <div class="section__inner">
         <header class="section__head">
-          <p class="section__eyebrow">Business</p>
-          <h2 id="business-heading" class="section__title">事業内容</h2>
+          <div class="section__head-inner">
+            <h2 id="business-heading" class="section__title">事業内容</h2>
+            <p class="section__sub">Business</p>
+          </div>
         </header>
         <ul class="business-list">
           <li>
@@ -92,35 +130,15 @@
     <section class="section section--featured" aria-labelledby="featured-heading">
       <div class="section__inner">
         <header class="section__head">
-          <p class="section__eyebrow">Pick up</p>
-          <h2 id="featured-heading" class="section__title">店舗情報ピックアップ</h2>
-          <p class="section__lead">三郷駅南口を彩る加盟店から、編集部が選んだお店をご紹介します。</p>
+          <div class="section__head-inner">
+            <h2 id="featured-heading" class="section__title">店舗情報ピックアップ</h2>
+            <p class="section__sub">Pick up</p>
+          </div>
         </header>
         <div id="featured-shops" class="shop-grid"></div>
         <div class="section__more">
           <a href="/shops.html" class="btn btn--primary">店舗情報一覧を見る</a>
         </div>
-      </div>
-    </section>
-
-    <section class="section section--news" id="news" aria-labelledby="news-heading">
-      <div class="section__inner">
-        <header class="section__head">
-          <p class="section__eyebrow">News</p>
-          <h2 id="news-heading" class="section__title">お知らせ</h2>
-        </header>
-        <ul class="news-list">
-          <li class="news-item">
-            <time datetime="2026-05-01" class="news-item__date">2026.05.01</time>
-            <span class="news-item__tag">サイト</span>
-            <p class="news-item__body">公式サイトをリニューアル公開しました。</p>
-          </li>
-          <li class="news-item">
-            <time datetime="2026-04-15" class="news-item__date">2026.04.15</time>
-            <span class="news-item__tag">LINE</span>
-            <p class="news-item__body">LINE公式アカウントで最新情報を配信中です。お友だち登録をお願いします。</p>
-          </li>
-        </ul>
       </div>
     </section>
   </main>
