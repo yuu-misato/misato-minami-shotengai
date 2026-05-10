@@ -59,11 +59,12 @@ async function fetchShops() {
     const res = await fetch('/api/shops', { headers: { Accept: 'application/json' } });
     if (!res.ok) throw new Error('api error');
     const json = await res.json();
-    if (Array.isArray(json?.shops) && json.shops.length) {
+    // Supabaseから返ってきたデータは正データとして扱う（空配列でもフォールバックしない）
+    if (json?.source === 'supabase' && Array.isArray(json.shops)) {
       return json.shops;
     }
   } catch {
-    // fall through to sample data
+    // unconfigured / error 時のみサンプルデータへフォールバック
   }
   return SAMPLE_SHOPS;
 }
@@ -137,6 +138,10 @@ async function initShopsPage() {
     }
     if (emptyEl) {
       emptyEl.hidden = filtered.length !== 0;
+      emptyEl.textContent =
+        sorted.length === 0
+          ? '現在、登録されている加盟店はありません。'
+          : '該当するお店が見つかりませんでした。検索条件を変更してお試しください。';
     }
   };
 
