@@ -10,8 +10,9 @@
   --color-accent: #c8512c;
   --color-accent-soft: #e89071;
   --color-tag-food: #c8512c;
-  --color-tag-shop: #2f7a5e;
-  --color-tag-service: #3a5a9c;
+  --color-tag-medical: #2f7a5e;
+  --color-tag-welfare: #3a5a9c;
+  --color-line-brand: #06c755;
   --radius: 10px;
   --radius-lg: 16px;
   --shadow-sm: 0 1px 2px rgba(28, 31, 36, 0.05);
@@ -546,11 +547,11 @@ ol {
   background: linear-gradient(135deg, #b34528 0%, #d96a40 100%);
 }
 
-.shop-card__visual--shop {
+.shop-card__visual--medical {
   background: linear-gradient(135deg, #2c6952 0%, #4d9075 100%);
 }
 
-.shop-card__visual--service {
+.shop-card__visual--welfare {
   background: linear-gradient(135deg, #2c4775 0%, #4a6ba0 100%);
 }
 
@@ -596,19 +597,19 @@ ol {
   flex-shrink: 0;
 }
 
-.shop-card__category--飲食 {
+.shop-card__category--food {
   background: rgba(200, 81, 44, 0.12);
   color: var(--color-tag-food);
 }
 
-.shop-card__category--物販 {
+.shop-card__category--medical {
   background: rgba(47, 122, 94, 0.14);
-  color: var(--color-tag-shop);
+  color: var(--color-tag-medical);
 }
 
-.shop-card__category--サービス {
+.shop-card__category--welfare {
   background: rgba(58, 90, 156, 0.14);
-  color: var(--color-tag-service);
+  color: var(--color-tag-welfare);
 }
 
 .shop-card__subcategory {
@@ -909,4 +910,115 @@ ol {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 1.5rem;
   margin-top: 1.5rem;
+}
+
+/* LINE button + nav variant */
+.btn--line {
+  background: var(--color-line-brand);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--line:hover {
+  background: #05a847;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.primary-nav .nav-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--color-line-brand);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-bottom: 0;
+}
+
+.primary-nav .nav-line:hover {
+  background: #05a847;
+  color: #fff;
+  border-bottom: 0;
+}
+
+@media (max-width: 720px) {
+  .primary-nav .nav-line {
+    display: block;
+    padding: 0.85rem 0.2rem;
+    background: transparent;
+    color: var(--color-line-brand);
+    border-radius: 0;
+  }
+  .primary-nav .nav-line:hover {
+    background: transparent;
+    color: #05a847;
+  }
+}
+
+/* Message section */
+.section--message {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.section__lead--wide {
+  max-width: 100%;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* Business section */
+.section--business {
+  background: #f4ede1;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.business-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+}
+
+.business-list > li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.4rem 1.5rem;
+  position: relative;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.business-list > li:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.business-list > li::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  margin-bottom: 0.85rem;
+}
+
+.business-list__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+  letter-spacing: 0.02em;
+}
+
+.business-list > li p {
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  line-height: 1.7;
 }

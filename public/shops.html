@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>加盟店紹介｜三郷駅南商店会</title>
-  <meta name="description" content="三郷駅南商店会に加盟する飲食店、物販店、サービス店を一覧でご紹介します。カテゴリ別の絞り込みや店名検索で、お探しのお店がきっと見つかります。">
+  <title>店舗情報｜三郷駅南口商店会</title>
+  <meta name="description" content="三郷駅南口商店会に加盟する飲食店、医療・治療、福祉・カルチャーのお店を一覧でご紹介します。">
+  <meta property="og:title" content="店舗情報｜三郷駅南商店会">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -15,8 +16,8 @@
       <a href="/" class="site-logo">
         <span class="site-logo__mark">南</span>
         <span class="site-logo__text">
-          <span class="site-logo__title">三郷駅南商店会</span>
-          <span class="site-logo__sub">Misato Minami Shotenkai</span>
+          <span class="site-logo__title">三郷駅南口商店会</span>
+          <span class="site-logo__sub">Misato Eki Minami Shotenkai</span>
         </span>
       </a>
       <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-nav">
@@ -25,9 +26,11 @@
       <nav class="primary-nav" id="primary-nav" aria-label="メインメニュー">
         <ul>
           <li><a href="/">ホーム</a></li>
-          <li><a href="/shops.html" aria-current="page">加盟店紹介</a></li>
-          <li><a href="/about.html">商店会について</a></li>
-          <li><a href="/#access">アクセス</a></li>
+          <li><a href="/#message">メッセージ</a></li>
+          <li><a href="/#business">事業内容</a></li>
+          <li><a href="/shops.html" aria-current="page">店舗情報</a></li>
+          <li><a href="/#news">お知らせ</a></li>
+          <li><a href="https://lin.ee/fuMJymX" class="nav-line" target="_blank" rel="noopener">LINE公式</a></li>
         </ul>
       </nav>
     </div>
@@ -36,9 +39,9 @@
   <main id="main">
     <section class="page-hero">
       <div class="page-hero__inner">
-        <p class="page-hero__eyebrow">Member shops</p>
-        <h1 class="page-hero__title">加盟店紹介</h1>
-        <p class="page-hero__lead">三郷駅南商店会に加盟する個性豊かなお店を一覧でご紹介します。お気に入りのお店を見つけて、ぜひ街歩きをお楽しみください。</p>
+        <p class="page-hero__eyebrow">Shops</p>
+        <h1 class="page-hero__title">店舗情報</h1>
+        <p class="page-hero__lead">三郷駅南口商店会に加盟する個性豊かなお店を一覧でご紹介します。お気に入りのお店を見つけて、ぜひ街歩きをお楽しみください。</p>
       </div>
     </section>
 
@@ -50,10 +53,10 @@
             <input type="search" id="shop-search" placeholder="店名・キーワードで検索" autocomplete="off">
           </div>
           <div class="shops-filters" role="tablist" aria-label="カテゴリで絞り込み">
-            <button type="button" class="filter-chip is-active" role="tab" aria-selected="true" data-category="all">すべて</button>
-            <button type="button" class="filter-chip" role="tab" aria-selected="false" data-category="飲食">飲食</button>
-            <button type="button" class="filter-chip" role="tab" aria-selected="false" data-category="物販">物販</button>
-            <button type="button" class="filter-chip" role="tab" aria-selected="false" data-category="サービス">サービス</button>
+            <button type="button" class="filter-chip is-active" role="tab" aria-selected="true" data-category="all" data-slug="all">すべて</button>
+            <button type="button" class="filter-chip" role="tab" aria-selected="false" data-category="飲食店" data-slug="food">飲食店</button>
+            <button type="button" class="filter-chip" role="tab" aria-selected="false" data-category="医療・治療" data-slug="medical">医療・治療</button>
+            <button type="button" class="filter-chip" role="tab" aria-selected="false" data-category="福祉・カルチャー" data-slug="welfare">福祉・カルチャー</button>
           </div>
         </div>
 
@@ -67,18 +70,20 @@
   <footer class="site-footer">
     <div class="site-footer__inner">
       <div class="site-footer__brand">
-        <p class="site-footer__title">三郷駅南商店会</p>
-        <p class="site-footer__sub">Misato Minami Shotenkai</p>
+        <p class="site-footer__title">三郷駅南口商店会</p>
+        <p class="site-footer__sub">Misato Eki Minami Shotenkai</p>
       </div>
       <nav aria-label="フッターメニュー" class="site-footer__nav">
         <ul>
           <li><a href="/">ホーム</a></li>
-          <li><a href="/shops.html">加盟店紹介</a></li>
-          <li><a href="/about.html">商店会について</a></li>
-          <li><a href="/#access">アクセス</a></li>
+          <li><a href="/#message">メッセージ</a></li>
+          <li><a href="/#business">事業内容</a></li>
+          <li><a href="/shops.html">店舗情報</a></li>
+          <li><a href="/#news">お知らせ</a></li>
+          <li><a href="https://lin.ee/fuMJymX" target="_blank" rel="noopener">LINE公式</a></li>
         </ul>
       </nav>
-      <p class="site-footer__copy">© 三郷駅南商店会</p>
+      <p class="site-footer__copy">©2024 三郷駅南商店会</p>
     </div>
   </footer>
 

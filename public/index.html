@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>三郷駅南商店会｜JR三郷駅南口の街と暮らしをつなぐ</title>
-  <meta name="description" content="JR三郷駅南口エリアの飲食・物販・サービス店が集う三郷駅南商店会の公式サイト。加盟店紹介、お知らせ、イベント情報を発信しています。">
+  <title>三郷駅南口商店会｜公式サイト</title>
+  <meta name="description" content="三郷駅南口商店会は、地域に根ざした温かい雰囲気の商店会です。お買い物やグルメ、美容、医療など様々なお店が揃っています。個性豊かなお店とふれあいながら、心温まるひとときをお過ごしください。">
+  <meta property="og:title" content="三郷駅南商店会">
+  <meta property="og:description" content="三郷駅南口商店会は、地域に根ざした温かい雰囲気の商店会です。">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -15,8 +18,8 @@
       <a href="/" class="site-logo">
         <span class="site-logo__mark">南</span>
         <span class="site-logo__text">
-          <span class="site-logo__title">三郷駅南商店会</span>
-          <span class="site-logo__sub">Misato Minami Shotenkai</span>
+          <span class="site-logo__title">三郷駅南口商店会</span>
+          <span class="site-logo__sub">Misato Eki Minami Shotenkai</span>
         </span>
       </a>
       <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-nav">
@@ -25,9 +28,11 @@
       <nav class="primary-nav" id="primary-nav" aria-label="メインメニュー">
         <ul>
           <li><a href="/">ホーム</a></li>
-          <li><a href="/shops.html">加盟店紹介</a></li>
-          <li><a href="/about.html">商店会について</a></li>
-          <li><a href="#access">アクセス</a></li>
+          <li><a href="/#message">メッセージ</a></li>
+          <li><a href="/#business">事業内容</a></li>
+          <li><a href="/shops.html">店舗情報</a></li>
+          <li><a href="/#news">お知らせ</a></li>
+          <li><a href="https://lin.ee/fuMJymX" class="nav-line" target="_blank" rel="noopener">LINE公式</a></li>
         </ul>
       </nav>
     </div>
@@ -38,36 +43,47 @@
       <div class="hero__inner">
         <p class="hero__eyebrow">JR三郷駅南口</p>
         <h1 class="hero__title">街と暮らしを、<br>もっと身近に。</h1>
-        <p class="hero__lead">三郷駅南商店会は、駅南口エリアで営む飲食店・物販店・サービス店が集う商店会です。地域の皆さまに親しまれる街づくりを目指しています。</p>
+        <p class="hero__lead">三郷駅南口商店会は、地域に根ざした温かい雰囲気の商店会です。お買い物やグルメ、美容、医療など様々なお店が揃っています。個性豊かなお店とふれあいながら、心温まるひとときをお過ごしください。</p>
         <div class="hero__actions">
-          <a href="/shops.html" class="btn btn--primary">加盟店を見る</a>
-          <a href="/about.html" class="btn btn--ghost">商店会について</a>
+          <a href="/shops.html" class="btn btn--primary">店舗情報を見る</a>
+          <a href="https://lin.ee/fuMJymX" class="btn btn--line" target="_blank" rel="noopener">LINE公式で最新情報</a>
         </div>
       </div>
       <div class="hero__pattern" aria-hidden="true"></div>
     </section>
 
-    <section class="section section--news" aria-labelledby="news-heading">
+    <section class="section section--message" id="message" aria-labelledby="message-heading">
       <div class="section__inner">
         <header class="section__head">
-          <p class="section__eyebrow">News</p>
-          <h2 id="news-heading" class="section__title">お知らせ</h2>
+          <p class="section__eyebrow">Message</p>
+          <h2 id="message-heading" class="section__title">メッセージ</h2>
         </header>
-        <ul class="news-list">
-          <li class="news-item">
-            <time datetime="2026-05-01" class="news-item__date">2026.05.01</time>
-            <span class="news-item__tag">イベント</span>
-            <p class="news-item__body">夏の夜市「みなみ夜市2026」を7月20日（土）に開催します。出店者を募集中です。</p>
+        <p class="section__lead section__lead--wide">三郷駅南口商店会は、地域の皆さまと共に歩み続ける商店会として、人と人とのふれあいを大切にしながら、街の賑わいづくりに取り組んでいます。日々の暮らしに寄り添い、安心して立ち寄れる場所であるために、加盟店一同、心を込めてお迎えします。</p>
+      </div>
+    </section>
+
+    <section class="section section--business" id="business" aria-labelledby="business-heading">
+      <div class="section__inner">
+        <header class="section__head">
+          <p class="section__eyebrow">Business</p>
+          <h2 id="business-heading" class="section__title">事業内容</h2>
+        </header>
+        <ul class="business-list">
+          <li>
+            <h3 class="business-list__title">地域イベントの企画・運営</h3>
+            <p>夏祭りや季節のイベントなど、地域を盛り上げる催しを企画・運営しています。</p>
           </li>
-          <li class="news-item">
-            <time datetime="2026-04-15" class="news-item__date">2026.04.15</time>
-            <span class="news-item__tag">加盟店</span>
-            <p class="news-item__body">「三郷ベーカリー」が新規加盟しました。詳細は加盟店紹介ページをご覧ください。</p>
+          <li>
+            <h3 class="business-list__title">加盟店の販促支援</h3>
+            <p>共通商品券、合同セール、スタンプラリーなど、加盟店全体の集客に取り組みます。</p>
           </li>
-          <li class="news-item">
-            <time datetime="2026-03-20" class="news-item__date">2026.03.20</time>
-            <span class="news-item__tag">お知らせ</span>
-            <p class="news-item__body">商店会公式サイトをリニューアルしました。今後ともよろしくお願いいたします。</p>
+          <li>
+            <h3 class="business-list__title">街づくりへの参画</h3>
+            <p>三郷市・地域団体と連携し、安心・安全で魅力ある街づくりに協力します。</p>
+          </li>
+          <li>
+            <h3 class="business-list__title">情報発信</h3>
+            <p>公式サイト・LINE公式アカウントで、加盟店情報やイベントを発信しています。</p>
           </li>
         </ul>
       </div>
@@ -77,44 +93,34 @@
       <div class="section__inner">
         <header class="section__head">
           <p class="section__eyebrow">Pick up</p>
-          <h2 id="featured-heading" class="section__title">加盟店ピックアップ</h2>
+          <h2 id="featured-heading" class="section__title">店舗情報ピックアップ</h2>
           <p class="section__lead">三郷駅南口を彩る加盟店から、編集部が選んだお店をご紹介します。</p>
         </header>
         <div id="featured-shops" class="shop-grid"></div>
         <div class="section__more">
-          <a href="/shops.html" class="btn btn--primary">加盟店一覧を見る</a>
+          <a href="/shops.html" class="btn btn--primary">店舗情報一覧を見る</a>
         </div>
       </div>
     </section>
 
-    <section class="section section--access" id="access" aria-labelledby="access-heading">
-      <div class="section__inner access-grid">
-        <div>
-          <p class="section__eyebrow">Access</p>
-          <h2 id="access-heading" class="section__title">アクセス</h2>
-          <p class="section__lead">JR三郷駅南口を出てすぐ、ロータリー周辺から続く商店エリアです。</p>
-          <dl class="access-info">
-            <div class="access-info__row">
-              <dt>所在地</dt>
-              <dd>埼玉県三郷市三郷駅南口エリア</dd>
-            </div>
-            <div class="access-info__row">
-              <dt>最寄駅</dt>
-              <dd>JR武蔵野線「三郷駅」南口より徒歩すぐ</dd>
-            </div>
-            <div class="access-info__row">
-              <dt>事務局</dt>
-              <dd>三郷駅南商店会 事務局<br>TEL: 048-XXX-XXXX（平日10:00-17:00）</dd>
-            </div>
-          </dl>
-        </div>
-        <div class="access-map" aria-hidden="true">
-          <div class="access-map__placeholder">
-            <span>三郷駅</span>
-            <span class="access-map__line"></span>
-            <span class="access-map__here">商店会エリア</span>
-          </div>
-        </div>
+    <section class="section section--news" id="news" aria-labelledby="news-heading">
+      <div class="section__inner">
+        <header class="section__head">
+          <p class="section__eyebrow">News</p>
+          <h2 id="news-heading" class="section__title">お知らせ</h2>
+        </header>
+        <ul class="news-list">
+          <li class="news-item">
+            <time datetime="2026-05-01" class="news-item__date">2026.05.01</time>
+            <span class="news-item__tag">サイト</span>
+            <p class="news-item__body">公式サイトをリニューアル公開しました。</p>
+          </li>
+          <li class="news-item">
+            <time datetime="2026-04-15" class="news-item__date">2026.04.15</time>
+            <span class="news-item__tag">LINE</span>
+            <p class="news-item__body">LINE公式アカウントで最新情報を配信中です。お友だち登録をお願いします。</p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -122,18 +128,20 @@
   <footer class="site-footer">
     <div class="site-footer__inner">
       <div class="site-footer__brand">
-        <p class="site-footer__title">三郷駅南商店会</p>
-        <p class="site-footer__sub">Misato Minami Shotenkai</p>
+        <p class="site-footer__title">三郷駅南口商店会</p>
+        <p class="site-footer__sub">Misato Eki Minami Shotenkai</p>
       </div>
       <nav aria-label="フッターメニュー" class="site-footer__nav">
         <ul>
           <li><a href="/">ホーム</a></li>
-          <li><a href="/shops.html">加盟店紹介</a></li>
-          <li><a href="/about.html">商店会について</a></li>
-          <li><a href="#access">アクセス</a></li>
+          <li><a href="/#message">メッセージ</a></li>
+          <li><a href="/#business">事業内容</a></li>
+          <li><a href="/shops.html">店舗情報</a></li>
+          <li><a href="/#news">お知らせ</a></li>
+          <li><a href="https://lin.ee/fuMJymX" target="_blank" rel="noopener">LINE公式</a></li>
         </ul>
       </nav>
-      <p class="site-footer__copy">© 三郷駅南商店会</p>
+      <p class="site-footer__copy">©2024 三郷駅南商店会</p>
     </div>
   </footer>
 

@@ -9,26 +9,29 @@ const escapeHtml = (str = '') =>
     "'": '&#39;',
   }[s]));
 
-const categoryClass = (cat) => {
-  if (cat === '飲食') return 'food';
-  if (cat === '物販') return 'shop';
-  if (cat === 'サービス') return 'service';
-  return 'other';
+const CATEGORY_SLUG = {
+  '飲食店': 'food',
+  '医療・治療': 'medical',
+  '福祉・カルチャー': 'welfare',
 };
+const SLUG_TO_CATEGORY = Object.fromEntries(
+  Object.entries(CATEGORY_SLUG).map(([k, v]) => [v, k])
+);
+
+const categoryClass = (cat) => CATEGORY_SLUG[cat] || 'other';
 
 function shopCard(shop) {
   const initial = shop.name.slice(0, 1);
-  const visualMod = categoryClass(shop.category);
-  const catMod = shop.category;
+  const slug = categoryClass(shop.category);
   return `
     <article class="shop-card" data-category="${escapeHtml(shop.category)}" data-name="${escapeHtml(shop.name)}" data-keywords="${escapeHtml(shop.subcategory || '')} ${escapeHtml(shop.description || '')}">
-      <div class="shop-card__visual shop-card__visual--${visualMod}" aria-hidden="true">
+      <div class="shop-card__visual shop-card__visual--${slug}" aria-hidden="true">
         <span class="shop-card__initial">${escapeHtml(initial)}</span>
       </div>
       <div class="shop-card__body">
         <div class="shop-card__head">
           <h3 class="shop-card__name">${escapeHtml(shop.name)}</h3>
-          <span class="shop-card__category shop-card__category--${escapeHtml(catMod)}">${escapeHtml(shop.category)}</span>
+          <span class="shop-card__category shop-card__category--${slug}">${escapeHtml(shop.category)}</span>
         </div>
         ${shop.subcategory ? `<p class="shop-card__subcategory">${escapeHtml(shop.subcategory)}</p>` : ''}
         ${shop.description ? `<p class="shop-card__desc">${escapeHtml(shop.description)}</p>` : ''}
@@ -59,7 +62,6 @@ async function fetchShops() {
     const res = await fetch('/api/shops', { headers: { Accept: 'application/json' } });
     if (!res.ok) throw new Error('api error');
     const json = await res.json();
-    // Supabaseから返ってきたデータは正データとして扱う（空配列でもフォールバックしない）
     if (json?.source === 'supabase' && Array.isArray(json.shops)) {
       return json.shops;
     }
@@ -145,15 +147,24 @@ async function initShopsPage() {
     }
   };
 
+  const setActiveByCategory = (category) => {
+    activeCategory = category;
+    filterButtons.forEach((b) => {
+      const isActive = (b.dataset.category || 'all') === category;
+      b.classList.toggle('is-active', isActive);
+      b.setAttribute('aria-selected', String(isActive));
+    });
+  };
+
   filterButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      filterButtons.forEach((b) => {
-        b.classList.remove('is-active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('is-active');
-      btn.setAttribute('aria-selected', 'true');
-      activeCategory = btn.dataset.category || 'all';
+      const cat = btn.dataset.category || 'all';
+      setActiveByCategory(cat);
+      const slug = btn.dataset.slug;
+      const newHash = slug && slug !== 'all' ? `#${slug}` : '';
+      if (location.hash !== newHash) {
+        history.replaceState(null, '', `${location.pathname}${newHash}`);
+      }
       render();
     });
   });
@@ -165,7 +176,19 @@ async function initShopsPage() {
     });
   }
 
-  render();
+  // 初期表示時、URLハッシュにマッチするカテゴリがあればそれを選択
+  const applyHash = () => {
+    const slug = location.hash.replace(/^#/, '');
+    const category = SLUG_TO_CATEGORY[slug];
+    if (category) {
+      setActiveByCategory(category);
+    } else {
+      setActiveByCategory('all');
+    }
+    render();
+  };
+  applyHash();
+  window.addEventListener('hashchange', applyHash);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
