@@ -30,9 +30,29 @@ Supabase未設定でもサンプルデータで動作します。
 
 ## デプロイ
 
+### Cloudflare Pages (GitHub連携)
+
+推奨。Cloudflareダッシュボードで一度接続すれば、`main`へのpushで自動デプロイされます。
+
+1. Cloudflareダッシュボード → Workers & Pages → Create application → Pages → **Connect to Git**
+2. このリポジトリ (`misato-minami-shotengai`) を選択
+3. ビルド設定:
+   - Production branch: `main`
+   - Build command: （空欄でOK。静的サイト）
+   - Build output directory: `public`
+   - Root directory: `/`
+4. （任意）Environment variables に `SUPABASE_URL` / `SUPABASE_ANON_KEY` を設定すると、`functions/api/shops.js` が実DBから取得します。未設定でもサンプルデータで動作します。
+5. Save and Deploy
+
+`functions/` 配下のPages Functionsは自動的に検出され、`/api/*` のエンドポイントとして動作します。
+
+### CLIから手動デプロイ
+
 ```bash
 npm run deploy
 ```
+
+事前に `npx wrangler login` が必要です。
 
 ## Supabaseスキーマ（参考）
 
