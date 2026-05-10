@@ -1,0 +1,7 @@
+name = "misato-minami-shotengai"
+compatibility_date = "2025-05-10"
+pages_build_output_dir = "public"
+
+[vars]
+# SUPABASE_URL = ""
+# SUPABASE_ANON_KEY = ""

@@ -1,0 +1,17 @@
+{
+  "name": "misato-minami-shotengai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev public --binding SUPABASE_URL SUPABASE_ANON_KEY",
+    "deploy": "wrangler pages deploy public",
+    "types": "wrangler types"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.14.0",
+    "@cloudflare/workers-types": "^4.20250510.0"
+  }
+}
