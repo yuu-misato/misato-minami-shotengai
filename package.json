@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "wrangler pages dev public --binding SUPABASE_URL SUPABASE_ANON_KEY",
+    "dev": "wrangler pages dev public",
     "deploy": "wrangler pages deploy public",
     "types": "wrangler types"
   },
